@@ -1,4 +1,5 @@
 import { randomInt } from "./random.js";
+import { RegularTicket } from "./regularticket.js";
 import { VIPTicket } from "./VIPTicket.js";
 
 export class Flight {
@@ -8,8 +9,7 @@ export class Flight {
     numberFlight,
     Maximumpassengers,
     regularPrice,
-    VIPprice,
-    Ticketslist
+    VIPprice
   ) {
     this.name = name;
     this.airline = airline;
@@ -17,16 +17,19 @@ export class Flight {
     this.Maximumpassengers = Maximumpassengers;
     this.regularPrice = regularPrice;
     this.VIPprice = VIPprice;
-    this.Ticketslist = Ticketslist;
+    this.Ticketslist =  [];
   }
-  createTicketVAP(ticket, name) {
-    return new VIPTicket(randomInt(1, 1000), ticket, name, [
+  createTicketVAP( arr) {
+    return new VIPTicket(randomInt(1, 1000), arr[0], arr[1], [
       "Free alcohol",
       "Free food",
       "Hot towels",
     ]);
   }
-  createTicketRegular(ticket, name) {
-    return new VIPTicket(randomInt(1, 1000), ticket,name);
+  createTicketRegular(arr) {
+    return new RegularTicket(randomInt(1, 1000),arr[0], arr[1]);
+  }
+  addtoarr(data){
+    this.Ticketslist.push(data)
   }
 }

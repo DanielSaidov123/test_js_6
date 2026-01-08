@@ -6,5 +6,4 @@ export class VIPTicket extends Ticket {
   }
 }
 
-const c = new VIPTicket(1, 2, "fds",["fdsf"]);
-console.log(c);
+
