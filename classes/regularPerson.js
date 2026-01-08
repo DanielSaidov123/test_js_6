@@ -23,6 +23,7 @@ export class RegularPassenger extends Passenger {
        }
      }
      else{
+      this.amountofmoney -= flight.regularPrice ;
       return [(flight.regularPrice) ,this.name]
      }
   }

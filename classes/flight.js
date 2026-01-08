@@ -19,11 +19,7 @@ export class Flight {
     this.Ticketslist =  [];
   }
   createTicketVAP( arr) {
-    return new VIPTicket(crypto.randomUUID(), arr[0], arr[1], [
-      "Free alcohol",
-      "Free food",
-      "Hot towels",
-    ]);
+    return new VIPTicket(crypto.randomUUID(), arr[0], arr[1], ["Free alcohol","Free food","Hot towels"]);
   }
   createTicketRegular(arr) {
     return new RegularTicket(crypto.randomUUID(),arr[0], arr[1]);
