@@ -6,7 +6,9 @@ export class RegularPassenger extends Passenger {
     this.Workplace = Workplace;
     this.knowsemployee = knowsemployee;
   }
-  Purchasingtickets(flight, typeticket) {
-    
+
+  
+  Purchasingtickets(flight) {
+    if(this.amountofmoney > flight){ };
   }
 }
