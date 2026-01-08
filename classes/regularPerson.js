@@ -7,8 +7,21 @@ export class RegularPassenger extends Passenger {
     this.knowsemployee = knowsemployee;
   }
 
-  
-  Purchasingtickets(flight) {
-    if(this.amountofmoney > flight){ };
+
+  Purchasingtickets(flight,typeticket) {
+    if(this.amountofmoney <flight.regularPrice){ 
+      return false
+    }
+    if(this.knowsemployee){
+      if(typeticket== 'regolar'){
+        return [(flight.regularPrice)*0.8,this.name]
+       }
+       else if(typeticket== 'VIP'){ 
+        return [(flight.regularPrice)*0.85,this.name]
+       }
+     }
+     else{
+      return [(flight.regularPrice) ,this.name]
+     }
   }
 }

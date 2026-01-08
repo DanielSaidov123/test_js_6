@@ -1,7 +1,4 @@
 import { Passenger } from "./passenger.js";
-import { RegularTicket } from "./regularticket.js";
-import { Flight } from "./flight.js";
-import { VIPTicket } from "./VIPTicket.js";
 
 export class Student extends Passenger {
   constructor(name, IDnumber, amountofmoney, school) {
