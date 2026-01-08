@@ -1,5 +1,4 @@
 import { Flight } from "./flight.js";
-import { RegularPassenger } from "./regularPerson.js";
 import { Student } from "./student.js";
 
 export class Airport {
@@ -39,7 +38,7 @@ export class Airport {
       flay2.addtoarr(ticket1);
     }
     ///////////////////////////////////
-     const flay3 = new Flight("vgqa", "fdsf", 33, 5, 100, 200);
+     const flay3 = new Flight("vgqa", "fdsf", 33, 10, 100, 200);
     const indexRegular3 = (Math.round(flay3.Maximumpassengers * 0.9))-1;
     const indexVIP3 = Math.round(flay3.Maximumpassengers * 0.1);
 
