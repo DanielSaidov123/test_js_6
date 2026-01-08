@@ -25,5 +25,6 @@ flay.addtoarr(ticket1);
 flay.addtoarr(ticket2);
 flay.addtoarr(ticket3);
 flay.addtoarr(ticket4);
+console.log(student1);
 
 console.log(flay);

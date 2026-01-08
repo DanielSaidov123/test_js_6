@@ -14,9 +14,11 @@ export class RegularPassenger extends Passenger {
     }
     if(this.knowsemployee){
       if(typeticket== 'regolar'){
+        this.amountofmoney -= flight.regularPrice * 0.8;
         return [(flight.regularPrice)*0.8,this.name]
        }
        else if(typeticket== 'VIP'){ 
+        this.amountofmoney -= flight.regularPrice * 0.85;
         return [(flight.regularPrice)*0.85,this.name]
        }
      }
