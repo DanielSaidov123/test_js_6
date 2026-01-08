@@ -11,6 +11,6 @@ test(" Student Class", () => {
 test(" Student Class", () => {
   const flay = new Flight("daniel", "fdsf", 132, 3, 100, 200);
   const student1 = new Student("ff", 23, 1000, "vewgg");
-    const ticket =student1.Purchasingtickets(flay,'VIP')
-  assert.deepStrictEqual(ticket, [200,'ff'] );
+    const ticket =student1.Purchasingtickets(flay,'regolar')
+  assert.deepStrictEqual(ticket, [90,'ff'] );
 });
